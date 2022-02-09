@@ -1,6 +1,6 @@
 # vFollowCheck
 
-> 基于 [Mirai Console](https://github.com/mamoe/mirai-console) 的 查梗插件
+> 基于 [Mirai Console](https://github.com/mamoe/mirai-console) 的 [查成分](https://tools.asoulfan.com) 插件
 
 [![Release](https://img.shields.io/github/v/release/Echoosx/vFollowCheck)](https://github.com/Echoosx/vFollowCheck/releases)
 [![Build](https://github.com/Echoosx/vFollowCheck/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)](https://github.com/Echoosx/vFollowCheck/actions/workflows/gradle.yml)

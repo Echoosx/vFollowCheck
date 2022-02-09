@@ -1,4 +1,4 @@
-# MemeSeeker
+# vFollowCheck
 
 > 基于 [Mirai Console](https://github.com/mamoe/mirai-console) 的 查梗插件
 
@@ -22,5 +22,5 @@
 | `(/)<ccf 查成分> [B站昵称或uid]` | 查询B站用户关注的Vup |
 
 ## 安装
-- 从 [Releases](https://github.com/Echoosx/MemeSeeker/releases) 下载`jar`包，将其放入工作目录下`plugins`文件夹
+- 从 [Releases](https://github.com/Echoosx/vFollowCheck/releases) 下载`jar`包，将其放入工作目录下`plugins`文件夹
 - 如果没有`plugins`文件夹，先运行 [Mirai Console](https://github.com/mamoe/mirai-console) ，会自动生成

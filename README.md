@@ -7,6 +7,8 @@
 ## 功能
 本插件数据基于 [枝江成分姬](https://tools.asoulfan.com)，可以查询B站用户关注的Vup
 
+![image](https://user-images.githubusercontent.com/22994765/153237477-cf5bded8-0ec6-4933-a2f7-cdfce78f69de.png)
+
 ## 指令
 注意: 使用前请确保可以 [在聊天环境执行指令](https://github.com/project-mirai/chat-command)  
 带括号的`/`前缀是缺省的  

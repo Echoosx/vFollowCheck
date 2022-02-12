@@ -2,7 +2,7 @@ package org.echoosx.mirai.plugin.utl
 
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.echoosx.mirai.plugin.PluginMain
+import org.echoosx.mirai.plugin.VFollowCheck
 import java.io.IOException
 
 class FollowInvisibleException(unameOrUid:String):Exception(){
@@ -22,7 +22,7 @@ fun httpGET(url: String):String{
         val response = call.execute()
         tempString = response.body?.string().toString()
     } catch (e: IOException) {
-        PluginMain.logger.error(e)
+        VFollowCheck.logger.error(e)
     }
     return tempString
 }

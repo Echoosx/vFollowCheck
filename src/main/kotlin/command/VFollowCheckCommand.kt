@@ -6,13 +6,13 @@ import net.mamoe.mirai.console.command.descriptor.ExperimentalCommandDescriptors
 import net.mamoe.mirai.console.command.getGroupOrNull
 import net.mamoe.mirai.console.util.ConsoleExperimentalApi
 import net.mamoe.mirai.message.data.At
-import org.echoosx.mirai.plugin.PluginMain
+import org.echoosx.mirai.plugin.VFollowCheck
 import org.echoosx.mirai.plugin.utl.FollowInvisibleException
 import org.echoosx.mirai.plugin.utl.httpGET
 import org.json.JSONObject
 
 object VFollowCheckCommand:SimpleCommand(
-    PluginMain,
+    VFollowCheck,
     "ccf","查成分",
     description = "查询B站关注的虚拟主播"
 ){
@@ -46,7 +46,7 @@ object VFollowCheckCommand:SimpleCommand(
             sendMessage(e.message)
         }catch (e:Exception){
             sendMessage("查询失败")
-            PluginMain.logger.error(e)
+            VFollowCheck.logger.error(e)
         }
     }
 }

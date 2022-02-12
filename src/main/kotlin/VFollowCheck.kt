@@ -6,11 +6,11 @@ import net.mamoe.mirai.console.plugin.jvm.KotlinPlugin
 import net.mamoe.mirai.utils.info
 import org.echoosx.mirai.plugin.command.VFollowCheckCommand
 
-object PluginMain : KotlinPlugin(
+object VFollowCheck : KotlinPlugin(
     JvmPluginDescription(
-        id = "org.echoosx.vFollowCheck",
+        id = "org.echoosx.mirai.plugin.vFollowCheck",
         name = "vFollowCheck",
-        version = "1.0.0"
+        version = "1.0.1"
     ) {
         author("Echoosx")
     }

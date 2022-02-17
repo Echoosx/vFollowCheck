@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "org.echoosx"
-version = "1.0.1"
+version = "1.1.0"
 
 repositories {
     mavenLocal()
@@ -16,4 +16,5 @@ repositories {
 }
 dependencies {
     implementation("org.json:json:20211205")
+    implementation("org.jsoup:jsoup:1.14.3")
 }

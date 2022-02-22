@@ -1,6 +1,6 @@
 package org.echoosx.mirai.plugin.utl
 
-import org.echoosx.mirai.plugin.BiliConfig.cookie
+import org.echoosx.mirai.plugin.config.BiliConfig.cookie
 import org.echoosx.mirai.plugin.VFollowCheck
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document

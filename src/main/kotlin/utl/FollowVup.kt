@@ -25,7 +25,7 @@ fun getFollowVupName(unameOrUid:String):String{
             }
             var total = mergeCfj(unameOrUid,followVupList)
             if(followVupList.size == 0){
-                append("用户【${unameOrUid}】未关注Vup")
+                append("用户【${unameOrUid}】未关注虚拟主播")
                 return@buildString
             }
             total = if(followVupList.size < total && total > 50){
@@ -33,7 +33,7 @@ fun getFollowVupName(unameOrUid:String):String{
             }else
                 followVupList.size
 
-            appendLine("用户【${unameOrUid}】关注的Vup共${total}位：")
+            appendLine("用户【${unameOrUid}】关注的虚拟主播共${total}位：")
             for(uname in followVupList){
                 append("${uname}、")
             }

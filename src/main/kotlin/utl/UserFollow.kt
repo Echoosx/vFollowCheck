@@ -1,6 +1,6 @@
 package org.echoosx.mirai.plugin.utl
 
-import org.echoosx.mirai.plugin.BiliConfig
+import org.echoosx.mirai.plugin.config.BiliConfig
 import org.json.JSONObject
 import org.jsoup.Connection
 import org.jsoup.Jsoup

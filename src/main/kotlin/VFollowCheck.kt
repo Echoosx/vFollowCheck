@@ -23,7 +23,7 @@ object VFollowCheck : KotlinPlugin(
     JvmPluginDescription(
         id = "org.echoosx.mirai.plugin.VFollowCheck",
         name = "VFollowCheck",
-        version = "1.1.1"
+        version = "1.1.2"
     ) {
         author("Echoosx")
     }

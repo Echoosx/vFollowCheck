@@ -8,6 +8,6 @@ object BiliConfig:AutoSavePluginConfig("Setting") {
     @ValueDescription("Cookie")
     val cookie: String by value()
 
-    @ValueDescription("更新间隔/h")
-    val updateDuring: Int by value(24)
+    @ValueDescription("Vtb列表更新间隔（Cron表达式）")
+    val updateCron: String by value("0 0 0 * * ?")
 }

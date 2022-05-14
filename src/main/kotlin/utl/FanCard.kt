@@ -9,8 +9,7 @@ import org.jsoup.Jsoup
 
 
 fun getFanCard(unameOrUid:String):String{
-    var mid:Long? = null
-    mid = if(unameOrUid.matches(Regex("[0-9]+"))){
+    val mid: Long? = if(unameOrUid.matches(Regex("[0-9]+"))){
         unameOrUid.toLong()
     }else{
         getMidByNick(unameOrUid)

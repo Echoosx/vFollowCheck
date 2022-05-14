@@ -1,5 +1,6 @@
 package org.echoosx.mirai.plugin.utl
 
+import org.echoosx.mirai.plugin.VFollowCheck
 import org.echoosx.mirai.plugin.config.BiliConfig
 import org.json.JSONObject
 import org.jsoup.Connection

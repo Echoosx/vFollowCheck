@@ -37,7 +37,7 @@ object VFollowCheck : KotlinPlugin(
         SupplyVtbs.reload()
 
         logger.info { "vFollowCheck loaded" }
-        GlobalEventChannel.subscribeAlways<BotOnlineEvent> {
+        GlobalEventChannel.subscribeOnce<BotOnlineEvent> {
             val updateTimer = object :TimerTask(){
                 override fun run() {
                     this@VFollowCheck.launch {

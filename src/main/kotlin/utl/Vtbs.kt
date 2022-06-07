@@ -5,6 +5,10 @@ import org.json.JSONObject
 import org.jsoup.Connection
 import org.jsoup.Jsoup
 
+/**
+ * 获取Vtuber数据库列表
+ * @return Vtuber账号uid列表
+ */
 fun getVtbs():MutableSet<Long>{
     val res: Connection.Response = Jsoup.connect("https://vtbs.musedash.moe/v1/vtbs")
         .ignoreContentType(true)

@@ -21,7 +21,7 @@ object FollowCheck:SimpleCommand(
     @Suppress("unused")
     suspend fun CommandSender.handle(unameOrUid:String){
         try{
-            val msg = getFollowVupName(unameOrUid)
+            val msg = getFollowVup(unameOrUid)
             if(getGroupOrNull() == null)
                 sendMessage(msg)
             else

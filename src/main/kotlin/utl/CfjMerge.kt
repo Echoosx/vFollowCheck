@@ -4,16 +4,20 @@ import org.json.JSONObject
 import org.jsoup.Connection
 import org.jsoup.Jsoup
 
-fun mergeCfj(unameOrUid:String, originList:MutableSet<String>):Int{
-
+/**
+ * 将成分姬的查询结果合并进主查询（因为成分姬能查询到250+之后的关注）
+ * @param uid 账号uid
+ * @param originList 主查询结果串
+ * @return 成分姬查询结果数
+ */
+fun mergeCfj(uid:Long, originList:MutableSet<String>):Int{
     val res: Connection.Response = Jsoup.connect("https://api.asoulfan.com/cfj/")
-        .data("name",unameOrUid)
+        .data("name",uid.toString())
         .ignoreContentType(true)
         .execute()
 
     val body = res.body()
-    val code = JSONObject(body).getInt("code")
-    if(code == 22115) throw FollowInvisibleException(unameOrUid)
+    JSONObject(body).getInt("code").apply { if(this == 22115) return 0 }
     val cfjList = JSONObject(body).getJSONObject("data").getJSONArray("list")
     val total = JSONObject(body).getJSONObject("data").getInt("total")
 

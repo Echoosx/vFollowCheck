@@ -18,4 +18,5 @@ dependencies {
     implementation("org.json:json:20211205")
     implementation("org.jsoup:jsoup:1.14.3")
     implementation("org.quartz-scheduler:quartz:2.3.2")
+    testImplementation(kotlin("test"))
 }

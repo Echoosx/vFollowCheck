@@ -14,7 +14,7 @@ import org.echoosx.mirai.plugin.utl.getFanCard
 object FanCardCheck : SimpleCommand(
     VFollowCheck,
     "fsp","粉丝牌",
-    description = "查询B站用户粉丝牌中的V"
+    description = "查询B站用户的虚拟主播粉丝牌"
 ) {
     @OptIn(ConsoleExperimentalApi::class, ExperimentalCommandDescriptors::class)
     override val prefixOptional: Boolean = true

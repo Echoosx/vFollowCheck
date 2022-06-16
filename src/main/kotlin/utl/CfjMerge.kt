@@ -11,19 +11,23 @@ import org.jsoup.Jsoup
  * @return 成分姬查询结果数
  */
 fun mergeCfj(uid:Long, originList:MutableSet<String>):Int{
-    val res: Connection.Response = Jsoup.connect("https://api.asoulfan.com/cfj/")
-        .data("name",uid.toString())
-        .ignoreContentType(true)
-        .execute()
+    try {
+        val res: Connection.Response = Jsoup.connect("https://api.asoulfan.com/cfj/")
+            .data("name", uid.toString())
+            .ignoreContentType(true)
+            .execute()
 
-    val body = res.body()
-    JSONObject(body).getInt("code").apply { if(this == 22115) return 0 }
-    val cfjList = JSONObject(body).getJSONObject("data").getJSONArray("list")
-    val total = JSONObject(body).getJSONObject("data").getInt("total")
-
-    for(follow in cfjList) {
-        val uname = (follow as JSONObject).getString("uname")
-        originList.add(uname)
+        val body = res.body()
+        JSONObject(body).getInt("code").apply { if (this == 22115) return 0 }
+        val cfjList = JSONObject(body).getJSONObject("data").getJSONArray("list")
+        val total = JSONObject(body).getJSONObject("data").getInt("total")
+        for(follow in cfjList) {
+            val uname = (follow as JSONObject).getString("uname")
+            originList.add(uname)
+        }
+        return total
+    }catch (e:Throwable){
+        logger.error("Error:$e")
+        return 0
     }
-    return total
 }

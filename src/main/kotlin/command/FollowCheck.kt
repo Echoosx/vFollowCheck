@@ -12,7 +12,7 @@ import org.echoosx.mirai.plugin.utl.*
 object FollowCheck:SimpleCommand(
     VFollowCheck,
     "ccf","查成分",
-    description = "查询B站关注虚拟主播"
+    description = "查询B站用户关注的虚拟主播"
 ) {
     @OptIn(ConsoleExperimentalApi::class, ExperimentalCommandDescriptors::class)
     override val prefixOptional: Boolean = true
